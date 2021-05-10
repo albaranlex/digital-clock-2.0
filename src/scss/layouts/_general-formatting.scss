@@ -9,9 +9,7 @@ body {
 }
 
 .main-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
   flex-direction: column;
   background-color: #e7e6e6;
   width: 100vw;
@@ -33,9 +31,7 @@ body {
   }
 }
 .clock {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  @include flex-center;
   width: 500px;
   height: 180px;
   border: 20px solid #f5f5f596;
@@ -46,9 +42,7 @@ body {
   .hour-cont,
   .min-cont,
   .sec-cont {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     width: 80px;
     height: 80px;
     background-color: #f5f5f596;
