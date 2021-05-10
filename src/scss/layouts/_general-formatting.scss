@@ -3,41 +3,62 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: Avenir;
+}
+
 .main-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  flex-direction: column;
+  background-color: #e7e6e6;
   width: 100vw;
   height: 100vh;
-  border: 1px solid black;
+  transition: 0.3s;
 }
 
-.sub-container {
+.switch {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  button {
+    margin: 10px;
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: whitesmoke;
+  }
+}
+.clock {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 400px;
+  width: 500px;
   height: 180px;
-  border: 2px solid white;
-  margin: 50px;
+  border: 20px solid #f5f5f596;
+  box-shadow: 0px 5px 5px 0px #ffffff;
+  margin: 20px 80px;
   padding: 20px;
+  white-space: nowrap;
+  .hour-cont,
+  .min-cont,
+  .sec-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: #f5f5f596;
+    font-size: 50px;
+  }
+  .colon {
+    font-size: 30px;
+  }
 }
 
-.hours {
-  background-color: blue;
-  width: 20px;
-  height: 20px;
-}
-
-.minutes {
-  background-color: blue;
-  width: 20px;
-  height: 20px;
-}
-
-.seconds {
-  background-color: blue;
-  width: 20px;
-  height: 20px;
+.mono2 {
+  display: none;
 }
