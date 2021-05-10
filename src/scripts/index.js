@@ -36,8 +36,9 @@ currentTime();
 
 //TOGGLES SWITCHES
 function darkMode() {
-  document.querySelector(".main-container").style.backgroundColor = "#1f1f1f";
-  document.querySelector(".main-container").style.color = "white";
+  document
+    .querySelector(".main-container")
+    .setAttribute("style", "background-color: black; color: white");
   document.querySelector(".clock").style.borderColor = "black";
   document.querySelector(".clock").style.boxShadow = "0px 5px 5px 0px #3a3a3a";
   document.querySelector(".mono1").style.display = "none";
@@ -53,20 +54,23 @@ function lightMode() {
   document.querySelector(".mono1").style.display = "unset";
 }
 
-// function randomColorGenerator(r, g, b) {
-//   let r = Math.floor(Math.random() * 255);
-//   let g = Math.floor(Math.random() * 255);
-//   let b = Math.floor(Math.random() * 255);
-//   let genColor = `rgb(${r},${g},${b})`;
-//   document.querySelector(".main-container").style.backgroundColor = "genColor";
-//   document.querySelector(".main-container").style.color = "genColor";
-//   document.querySelector(".clock").style.borderColor = "genColor";
-//   document.querySelector(".clock").style.boxShadow = "0px 5px 5px 0px genColor";
-//   document.querySelector(".mono1").style.display = "none";
-//   document.querySelector(".mono2").style.display = "unset";
-// }
+function randomColorGenerator() {
+  let r = Math.floor(Math.random() * 255);
+  let g = Math.floor(Math.random() * 255);
+  let b = Math.floor(Math.random() * 255);
+  let genColor = `rgb(${r},${g},${b})`;
+  console.log(genColor);
+  document.querySelector(".main-container").style.backgroundColor = genColor;
+  document.querySelector(".main-container").style.color = genColor;
+  document.querySelector(".clock").style.borderColor = genColor;
+  document.querySelector(
+    ".clock"
+  ).style.boxShadow = `0px 5px 5px 0px ${genColor}`;
+  document.querySelector(".mono1").style.display = "none";
+  document.querySelector(".mono2").style.display = "unset";
+}
 
 //EVENTS
 darkButton.addEventListener("click", darkMode);
 lightButton.addEventListener("click", lightMode);
-randomButton.addEventListener("click", randomThemer);
+randomButton.addEventListener("click", randomColorGenerator);
