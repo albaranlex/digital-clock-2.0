@@ -5,11 +5,6 @@ const secContainer = document.querySelector(".sec-cont");
 const darkButton = document.querySelector(".mono1 button");
 const lightButton = document.querySelector(".mono2 button");
 const randomButton = document.querySelector(".random button");
-const clockConts = document.querySelector(
-  ".hour-cont",
-  ".min-cont",
-  ".sec-cont"
-);
 
 //FUNCTIONS
 function currentTime() {
@@ -58,6 +53,20 @@ function lightMode() {
   document.querySelector(".mono1").style.display = "unset";
 }
 
+// function randomColorGenerator(r, g, b) {
+//   let r = Math.floor(Math.random() * 255);
+//   let g = Math.floor(Math.random() * 255);
+//   let b = Math.floor(Math.random() * 255);
+//   let genColor = `rgb(${r},${g},${b})`;
+//   document.querySelector(".main-container").style.backgroundColor = "genColor";
+//   document.querySelector(".main-container").style.color = "genColor";
+//   document.querySelector(".clock").style.borderColor = "genColor";
+//   document.querySelector(".clock").style.boxShadow = "0px 5px 5px 0px genColor";
+//   document.querySelector(".mono1").style.display = "none";
+//   document.querySelector(".mono2").style.display = "unset";
+// }
+
 //EVENTS
 darkButton.addEventListener("click", darkMode);
 lightButton.addEventListener("click", lightMode);
+randomButton.addEventListener("click", randomThemer);
