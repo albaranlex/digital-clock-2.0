@@ -38,34 +38,49 @@ currentTime();
 function darkMode() {
   document
     .querySelector(".main-container")
-    .setAttribute("style", "background-color: black; color: white");
-  document.querySelector(".clock").style.borderColor = "black";
-  document.querySelector(".clock").style.boxShadow = "0px 5px 5px 0px #3a3a3a";
+    .setAttribute("style", "background-color: #2b2b2b; color: white");
+  document
+    .querySelector(".clock")
+    .setAttribute(
+      "style",
+      "border-color: black; box-shadow: 0px 5px 5px 0px #3a3a3a"
+    );
   document.querySelector(".mono1").style.display = "none";
   document.querySelector(".mono2").style.display = "unset";
 }
 
 function lightMode() {
-  document.querySelector(".main-container").style.backgroundColor = "#e7e6e6";
-  document.querySelector(".main-container").style.color = "black";
-  document.querySelector(".clock").style.borderColor = "#f5f5f596";
-  document.querySelector(".clock").style.boxShadow = "0px 5px 5px 0px #000000";
+  document
+    .querySelector(".main-container")
+    .setAttribute(
+      "style",
+      "background-color: #e7e6e6; color: black; box-shadow: 0px 5px 5px 0px #000000"
+    );
+  document
+    .querySelector(".clock")
+    .setAttribute(
+      "style",
+      "border-color: #ffffffc5; box-shadow: 0px 5px 5px 0px black"
+    );
   document.querySelector(".mono2").style.display = "none";
   document.querySelector(".mono1").style.display = "unset";
 }
 
-function randomColorGenerator() {
+function color() {
   let r = Math.floor(Math.random() * 255);
   let g = Math.floor(Math.random() * 255);
   let b = Math.floor(Math.random() * 255);
   let genColor = `rgb(${r},${g},${b})`;
-  console.log(genColor);
-  document.querySelector(".main-container").style.backgroundColor = genColor;
-  document.querySelector(".main-container").style.color = genColor;
-  document.querySelector(".clock").style.borderColor = genColor;
+  return genColor;
+}
+
+function randomThemer() {
+  document.querySelector(".main-container").style.backgroundColor = color();
+  document.querySelector(".main-container").style.color = color();
+  document.querySelector(".clock").style.borderColor = color();
   document.querySelector(
     ".clock"
-  ).style.boxShadow = `0px 5px 5px 0px ${genColor}`;
+  ).style.boxShadow = `0px 5px 5px 0px ${color()}`;
   document.querySelector(".mono1").style.display = "none";
   document.querySelector(".mono2").style.display = "unset";
 }
@@ -73,4 +88,4 @@ function randomColorGenerator() {
 //EVENTS
 darkButton.addEventListener("click", darkMode);
 lightButton.addEventListener("click", lightMode);
-randomButton.addEventListener("click", randomColorGenerator);
+randomButton.addEventListener("click", randomThemer);
