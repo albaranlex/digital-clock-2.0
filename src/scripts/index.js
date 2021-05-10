@@ -43,7 +43,8 @@ currentTime();
 function darkMode() {
   document.querySelector(".main-container").style.backgroundColor = "#1f1f1f";
   document.querySelector(".main-container").style.color = "white";
-  document.querySelector(".clock").style.borderColor = "gray";
+  document.querySelector(".clock").style.borderColor = "black";
+  document.querySelector(".clock").style.boxShadow = "0px 5px 5px 0px #3a3a3a";
   document.querySelector(".mono1").style.display = "none";
   document.querySelector(".mono2").style.display = "unset";
 }
@@ -52,6 +53,7 @@ function lightMode() {
   document.querySelector(".main-container").style.backgroundColor = "#e7e6e6";
   document.querySelector(".main-container").style.color = "black";
   document.querySelector(".clock").style.borderColor = "#f5f5f596";
+  document.querySelector(".clock").style.boxShadow = "0px 5px 5px 0px #000000";
   document.querySelector(".mono2").style.display = "none";
   document.querySelector(".mono1").style.display = "unset";
 }
