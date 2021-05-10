@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid black;
+}
+
+.sub-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 400px;
+  height: 180px;
+  border: 2px solid white;
+  margin: 50px;
+  padding: 20px;
+}
+
+.hours {
+  background-color: blue;
+  width: 20px;
+  height: 20px;
+}
+
+.minutes {
+  background-color: blue;
+  width: 20px;
+  height: 20px;
+}
+
+.seconds {
+  background-color: blue;
+  width: 20px;
+  height: 20px;
+}
